@@ -22,7 +22,7 @@ button.addEventListener('click',function(e){
 // /////////////////////////////////////////////
 window.onscroll = function(){
    stickyMenu();
-
+   
 };
 
 // je recupere mon menu et mon header
@@ -45,7 +45,7 @@ function stickyMenu(){
 }
 
 // ////////////////////////////////////////////////////
-      // pour le menu souligne mediaquery >1050px//
+      // pour le menu general souligne mediaquery >1050px//
 // ////////////////////////////////////////////////////
 function underlineMenu(){
 // je recupere le contenu de mon menu
@@ -104,69 +104,3 @@ var contact = document.getElementById('contact').offsetTop;
       }
 }
 
-
-// ////////////////////////////////////////////////////
-      // pour le hover des icones services//
-// ////////////////////////////////////////////////////
-// var container = document.getElementsByClassName('case');
-// var icons = document.querySelectorAll('#services i');
-// var contIcons = container + icons;
-
-// for(var i =0; i<contIcons.length;i++){
-//       for(var j = 0; j>contIcons.lenght;j++){
-            
-//             contIcons[i].addEventListener("mouseover",function(e){
-                  
-//                   contIcons[j].style.color ='#ffffcc;';
-//                   contIcons[j].style.background ='rgba(51,255,255,0.6)';
-                  
-//       })
-// }}
-
-
-// je recupere mes containers
-var container = document.getElementsByClassName('case');
-for(var i =0; i<container.length;i++){
-      container[i].addEventListener("mouseover",function(e){
-            changeColorIcons();
-      })
-}
-
-      // je definit ma fonction et dans quelle condition ajouter la couleur
-function changeColorIcons(){
-            // je recupere mes icones
-      var icons = document.querySelectorAll('#services i');
-      for(var i=0; i<icons.length;i++){
-            icons[i].style.color ='#ffffcc';
-            icons[i].style.background ='rgba(51,255,255,0.6)';
-      
-      // switch(icons[i]){
-      //       case 'icons[i] == icons[0]':
-      //             alert('ok');
-      //       icons[0].style.color ='#ffffcc';
-      //       icons[0].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      //       case 'icons[i] == icons[1]':
-      //       icons[1].style.color ='#ffffcc';
-      //       icons[1].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      //       case 'icons[i] == icons[2]':
-      //       icons[2].style.color ='#ffffcc';
-      //       icons[2].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      //       case 'icons[i] == icons[3]':
-      //       icons[3].style.color ='#ffffcc';
-      //       icons[3].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      //       case 'icons[i] == icons[4]':
-      //       icons[4].style.color ='#ffffcc';
-      //       icons[4].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      //       case 'icons[i] == icons[5]':
-      //       icons[5].style.color ='#ffffcc';
-      //       icons[5].style.background ='rgba(51,255,255,0.6)';
-      //       break;
-      // }
-      }
-}
-      

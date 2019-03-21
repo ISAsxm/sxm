@@ -48,7 +48,6 @@ i{
 }
 i:hover{
     background: rgba(51,255,255,0.6);
-    /* background: #1c1c1c; */
     color: #ffffcc;
 }
 
@@ -87,6 +86,7 @@ body{
 h1{
     font-size: 3rem;
     font-weight: 900;
+    text-transform: capitalize;
 }
 
 h2{
@@ -123,7 +123,7 @@ section{
 /* pour pousser les elements a droite */
 .push{
     margin-left: auto;
- }
+}
 /*************************************/
         /* style du header */
 /*************************************/
@@ -132,7 +132,6 @@ section{
 header{
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/coordonees.jpg);
     background-size: cover;
-    width: 100vw;
     height: 100vh;
     color: #ffffff;
 } 
@@ -144,7 +143,7 @@ header{
     flex-direction: row;
     align-items: center;
     order: -1;
-    width: 100vw;
+    width: 100%;
     text-align: left;
 }
 .sticky{
@@ -280,23 +279,24 @@ header{
         /* style section about me */
 /*************************************/
 #about{
-    display:grid;
-    grid-template: 40% 60% / 100%;
+    /* abandon du grid mauvaise reaction sur google */
+    /* display:grid;
+    grid-template: 40% 60% / 100%; */
     text-align: left;
 }
 #about img{
-    grid-area: 1 / 1 / 2 / 2;
+    /* grid-area: 1 / 1 / 2 / 2;
     grid-row-end: 2 ;
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 2; */
     margin: auto;
 }
-#about .container{
+/* #about .container{
     grid-area: 2 / 2 / 2 / 2;
     grid-row-end: 3 ;
     grid-column-start: 1;
     grid-column-end: 2;
-}
+} */
 /* style du texte et des barres de progressions */
 #about h1,
 #about h3,
@@ -390,6 +390,10 @@ header{
     padding: 20px;
     margin: 20px;
     background-color: #ffffff;
+}
+.container.case:hover i.fas{
+    color : #ffffcc;
+    background : rgba(51,255,255,0.6);
 }
 
 /* pour centrer dans le container */
@@ -519,15 +523,22 @@ header{
 .container.testimonials div,
 .container.testimonials p,
 #slideContent li i, 
-#slideContent li h3, 
+#slideContent li h3,
+#slideContent li h4, 
 #slideContent li p{
     margin: 5px;
     padding: 5px;
     text-align: center;
 }
+#slideContent li h3,
+#slideContent li h4,
+.container.testimonials p{
+    text-transform: capitalize;
+}
 .container.testimonials h3{
     color: #33ffff;
 }
+
 /* style des icones */
 .container.testimonials .fas{
     background: #ffffff;
@@ -540,7 +551,10 @@ header{
 #blog{
     background-color: rgba(51, 255, 255, 0.05);
 }
-
+#blog h2{
+    color: #33ffff;
+    text-decoration: underline;
+}
 /* style du slideshow */
 /* animation pour slider les divs */
 @keyframes blogAutoSlide {
@@ -575,9 +589,10 @@ header{
 #blog-slideShow{
     display: flex;
     flex-direction: row;
-    position: relative;
+    
+    /* position: relative; */
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     margin: auto;
     overflow: hidden;
 }
@@ -585,9 +600,10 @@ header{
 /* le contenu du slide */
 #blog-slideContent{
     display: flex;
-    position: absolute;
+    
+    /* position: absolute; */
     width: 600%;
-    height: 300px;
+    /* height: 300px; */
     margin:0;
     padding: 0;
 /*appel de l'animation*/
@@ -602,23 +618,24 @@ header{
 .blog-slide{
     display: flex;
     flex-direction: column;
+    
     width: 100%;
-    height: 300px;
-    padding: 0px;
-    margin: auto;
+    /* height: 300px; */
+    padding: 10px;
+    /* margin: auto; */
     text-align: left;
 }
 
-.blog-img{
+/* .blog-img{
     height: 150px;
 }
 .blog-img img{
     height: 100%;
-}
+} */
 .container.blog-text{
     display: flex;
     flex-direction: column;
-    height: 150px;
+    /* height: 150px; */
     background-color: #ffffff;
 }
 /*************************************/
@@ -718,14 +735,16 @@ header ul{
         /* style section about me */
 /*************************************/
 #about{
-    grid-template: 100%/40% 60%;
+    /* abandon du grid car mauvaise interpretation sur google */
+    /* grid-template: 100%/40% 60%; */
+    flex-direction: row;
 }
-#picture-me{
+/* #picture-me{
     grid-area: 1/1/2/2;
 }
 #about .container{
     grid-area: 1/2/2/3;
-}
+} */
 
 #container-bar,
 #about-me-button{
@@ -797,14 +816,14 @@ header ul{
 }
 
 /* le container qui contient les slides */
-#blog-slideShow{
+/* #blog-slideShow{
     height: 400px;
-}
+} */
 
 /* le contenu du slide */
 #blog-slideContent{
     width: 135%;
-    height: 400px;
+    /* height: 400px; */
 /*appel de l'animation*/
 	/* animation-name: blogAutoSlide; */
     animation-duration: 10s;
@@ -813,23 +832,23 @@ header ul{
 
 /* le contenu des divs qui vont etre slide */
 
-#blog-slide{
+.blog-slide{
     width: 33%;
     padding: 20px;
     margin: 0px 10px 0px 10px;
 }
 
 /* les divs qui vont etre slide */
-#blog-slideContent div{
+/* #blog-slideContent div{
     width: 90%;
-}
+} */
 
 .blog-slide img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 .blog-text{
-    height: 150px;
+    /* height: 150px; */
     background: #ffffff;
 }
 
