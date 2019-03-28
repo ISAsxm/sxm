@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <header>
+    <header class="container">
         <!----------- start section menu avec barre de navigation et logo -------->
-        <section id="menu">
-            <span>The Friendly Island</span>
+        <section id="menu" class="row">
+            <span>The </span><span>Friendly </span><span> Island</span>
             <div id="container-burger" class="container push">
                 <div id="burger-content" class="container">
                     <nav id="menu-nav">
@@ -40,7 +40,7 @@
         </section>
         <!------------- end section menu avec barre de navigation et logo ------->
         <!------------- start section home avec titre et reseaux sociaux ---------->
-        <section id="home">
+        <section id="home" class="container">
             <h1>Hello</h1>
             <h2>I Am <span id="sxm">SXM</span><span>Saint-Martin</span><span>Sint Marteen</span></h2>
             <div>
@@ -55,10 +55,8 @@
     </header>
     <!--//////////////////////// end du header //////////////////////////////-->
     <!--//////////////////////// start section about me /////////////////////////-->
-    <section id="about">
-        <!-- <div id="picture-me"> -->
+    <section id="about" class="container">
             <img src="images/love_sxm.jpg" alt="i love sxm" />
-        <!-- </div> -->
         <div class="container">
             <h1>about me.</h1>
             <h3>O sweet Saint-Martin's Land</h3>
@@ -71,27 +69,27 @@
                 deserunt mollit anim id est laborum.
             </p>
             <!-------------barres de pourcentages ---------------->
-            <div id="container-bar">
+            <div id="container-bar" class="container">
                 <div class="bar">
-                    <div id="up1" class="percentage">
+                    <div id="up1" class="row percentage">
                         <span>Friendly</span>
                         <span class="push">95%</span>
                     </div>
                 </div>
                 <div class="bar">
-                    <div id="up2" class="percentage">
+                    <div id="up2" class="row percentage">
                         <span>Spicy</span>
                         <span class="push">80%</span>
                     </div>
                 </div>
                 <div class="bar">
-                    <div id="up3" class="percentage">
+                    <div id="up3" class="row percentage">
                         <span>Happy</span>
                         <span class="push">90%</span>
                     </div>
                 </div>
             </div>
-            <div id="about-me-button">
+            <div id="about-me-button" class="row">
                 <a href="#" class="button">Visit Me</a>
                 <a href="#" class="button">Contact Me</a>
             </div>
@@ -99,7 +97,7 @@
     </section>
     <!--//////////////////////// end section about me /////////////////////-->
     <!--//////////////////////// start section services ///////////////////-->
-    <section id="services">
+    <section id="services" class="container">
         <h1>services.</h1>
         <div class="container services">
             <div class="container case">
@@ -150,23 +148,25 @@
     </section>
     <!--//////////////////// end section services //////////////////////////-->
     <!--//////////////////// start section portfolio //////////////////////-->
-    <section id="portfolio">
+    <section id="portfolio" class="container">
         <div class="container">
         <h1>portfolio.</h1>
         <!----------------- start menu du portfolio ----------------->
         <nav>
-            <ul>
+            <ul class="row">
                 <li><a href="#">All</a></li>
-                <li><a href="#">Beaches</a></li>
-                <li><a href="#">Animals</a></li>
-                <li><a href="#">Sunsets</a></li>
+                <li><a href="#" id="beaches">Beaches</a></li>
+                <li><a href="#" id="animals">Animals</a></li>
+                <li><a href="#" id="sunsets">Sunsets</a></li>
             </ul>
         </nav>
     </div>
         <!----------------- end menu du portfolio ----------------->
         <div class="container portfolio">
-            <div class="portfolio-content">
-                <img src="images/pinel_island.jpg" alt="Pinel Island" class="portfolio-image beaches" />
+            <div class="row portfolio-content">
+                <a href="#beaches" class="portfolio-image">
+                    <img src="images/pinel_island.jpg" alt="Pinel Island" class="portfolio-image beaches"/>
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -175,8 +175,10 @@
                     </span>
                 </div>
             </div>
-            <div class="portfolio-content">
+            <div class="row portfolio-content">
+                <a href="#beaches" class="portfolio-image">
                 <img src="images/plane_maho.jpg" alt="plane arrival at Maho" class="portfolio-image beaches" />
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -184,9 +186,11 @@
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
-            </div>
-            <div class="portfolio-content">
+            </div> 
+            <div class="row portfolio-content">
+                <a href="#animals" class="portfolio-image">
                 <img src="images/iguana_pinel.jpg" alt="iguane at Pinel Island" class="portfolio-image animals" />
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -195,8 +199,10 @@
                     </span>
                 </div>
             </div>
-            <div class="portfolio-content">
-                <img src="images/sunset_grandcase.jpg" alt="sunset at Grand-Case" class="portfolio-image sunset" />
+            <div class="row portfolio-content">
+                <a href="#sunsets" class="portfolio-image">
+                <img src="images/sunset_grandcase.jpg" alt="sunset at Grand-Case" class="portfolio-image sunsets" />
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -205,8 +211,10 @@
                     </span>
                 </div>
             </div>
-            <div class="portfolio-content">
-                <img src="images/sunset_mullet_bay.jpg" alt="sunset at Mullet Bay" class="portfolio-image sunset" />
+            <div class="row portfolio-content">
+                <a href="#sunsets" class="portfolio-image">
+                <img src="images/sunset_mullet_bay.jpg" alt="sunset at Mullet Bay" class="portfolio-image sunsets" />
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -215,8 +223,10 @@
                     </span>
                 </div>
             </div>
-            <div class="portfolio-content">
+            <div class="row portfolio-content">
+                <a href="#animals" class="portfolio-image">
                 <img src="images/horses_beach.jpg" alt="chevaux" class="portfolio-image animals" />
+                </a>
                 <div class="container text">
                     <span>
                         <h2>Love this Island</h2>
@@ -229,7 +239,7 @@
     </section>
     <!--////////////// end section portfolio ///////////////-->
     <!--///////////// start section testimonials//////////////-->
-    <section id="testimonials">
+    <section id="testimonials" class="container">
         <div>
             <h1>testimonials.</h1>
             <img src="images/one_by_K.jpg" alt="One by K logo" />
@@ -242,21 +252,21 @@
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <h3>another one</h3>
-                            <h4>just another one happy customer</h4>
+                            <h4>just another one happy visitor</h4>
                         </li>
                         <li id="s2">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <h3>another one</h3>
-                            <h4>just another one</h4>
+                            <h4>just another one friendly visitor</h4>
                         </li>
                         <li id="s3">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                             <h3>another one</h3>
-                            <h4>just another one</h4>
+                            <h4>just another one spicy visitor</h4>
                         </li>
                     </ul>
                 </div>
@@ -299,12 +309,12 @@
     </section>
     <!--///////////// end section testimonials//////////////-->
     <!--///////////// start section blog//////////////-->
-    <section id="blog">
+    <section id="blog" class="container">
         <h1>my blog.</h1>
         <!--------------- start slideshow ------------>
-        <div id="blog-slideShow">
-            <div id="blog-slideContent">
-                <div id="sb1" class="blog-slide">
+        <div id="blog-slideShow" class="row">
+            <div id="blog-slideContent" class="row">
+                <div id="sb1" class="container blog-slide">
                     <div class="blog-img">
                         <img src="images/blog_mardi_gras.jpg" alt="carnival" />
                     </div>
@@ -314,7 +324,7 @@
                         <a href="#">Read More</a>
                     </div>
                 </div>
-                <div id="sb2" class="blog-slide">
+                <div id="sb2" class="container blog-slide">
                     <div class="blog-img">
                         <img src="images/blog_sand_man.jpg" alt="sand man" />
                     </div>
@@ -324,7 +334,7 @@
                         <a href="#">Read More</a>
                     </div>
                 </div>
-                <div id="sb3" class="blog-slide">
+                <div id="sb3" class="container blog-slide">
                     <div class="blog-img">
                         <img src="images/blog_dishes.jpg" alt="food" />
                     </div>
@@ -334,13 +344,13 @@
                         <a href="#">Read More</a>
                     </div>
                 </div>
-                <div id="sb4" class="blog-slide">
+                <div id="sb4" class="container blog-slide">
                     <div class="blog-img">
                         <img src="images/blog_hotel.jpg" alt="chambre d'hôtel" />
                     </div>
                     <div class="container blog-text">
                         <h2>Splendid Hotel</h2>
-                        <p>Luxurious hotel on the beach Lorem ipsum dolor sit amet,</p>
+                        <p>Luxurious hotel Lorem ipsum dolor sit amet,</p>
                         <a href="#">Read More</a>
                     </div>
                 </div>
@@ -360,7 +370,7 @@
     </section>
     <!--///////////// end section blog//////////////-->
     <!--///////////// start section contact//////////////-->
-    <section id="contact">
+    <section id="contact" class="container">
         <!---------- start presentation contact ------------>
         <h1>contact me.</h1>
         <div class="container contact">
@@ -400,9 +410,10 @@
         <!---------- end formulaire contact ------------>
     </section>
     <!--///////////// end section contact//////////////-->
-    <footer>
+    <footer class="row">
         <small> Copy Right 2019 &copy; By SXM All Rights Reserved</small>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 
