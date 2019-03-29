@@ -84,17 +84,31 @@ h1{
     font-size: 3rem;
     font-weight: 900;
     text-transform: capitalize;
+<<<<<<< HEAD
     color: rgb(142, 142, 142);
+=======
+    /* color: rgb(142, 142, 142); */
+    /* color: rgba(255, 204, 102,0.5); */
+    color: rgba(51,255,255,0.8);
+>>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 
 h2{
     font-size: 1.5rem;
     font-weight: 900;
+<<<<<<< HEAD
+=======
+    color: rgba(255, 204, 102,0.8);
+>>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 
 h3{
     font-size: 1rem;
     font-weight: 900;
+<<<<<<< HEAD
+=======
+    color: rgba(255, 204, 102,0.8);
+>>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 h4{
     font-size: 1rem;
@@ -407,7 +421,11 @@ header{
     width: 100%;
     max-width: 100%;
     height: 100%;
+<<<<<<< HEAD
     max-height: 100%; 
+=======
+    max-height: 100%;
+>>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 .text span{
     margin: auto;
@@ -704,7 +722,11 @@ header ul{
 /* le contenu des divs qui vont etre slide */
 
 .blog-slide{
+<<<<<<< HEAD
     /* width: 33%; */
+=======
+    width: 33%;
+>>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
     padding: 20px;
     margin: 0px 10px 0px 10px;
 }
