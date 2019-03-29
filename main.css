@@ -16,7 +16,9 @@ a{
     list-style: none;
     text-decoration: none;
     display: block;
-    color: #1c1c1c;
+}
+a{
+    color:rgba(255, 204, 102,0.6);
 }
 a:hover{
     color: #33ffff;
@@ -84,41 +86,32 @@ h1{
     font-size: 3rem;
     font-weight: 900;
     text-transform: capitalize;
-<<<<<<< HEAD
-    color: rgb(142, 142, 142);
-=======
     /* color: rgb(142, 142, 142); */
     /* color: rgba(255, 204, 102,0.5); */
     color: rgba(51,255,255,0.8);
->>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 
 h2{
     font-size: 1.5rem;
     font-weight: 900;
-<<<<<<< HEAD
-=======
     color: rgba(255, 204, 102,0.8);
->>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 
 h3{
     font-size: 1rem;
     font-weight: 900;
-<<<<<<< HEAD
-=======
     color: rgba(255, 204, 102,0.8);
->>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 h4{
     font-size: 1rem;
     font-weight: 400;
+    color: rgb(142, 142, 142);
 }
 p{
     font-family: 'Buda', cursive;
     font-size: 1rem;
     font-weight: 400;
-    color: rgb(142, 142, 142);
+    color:rgba(142, 142, 142, 0.8);
     text-align: justify;
 }
 /* style general des sections et div */
@@ -164,21 +157,19 @@ header{
     transition: all 0.5s ease-in-out;
     position: fixed;
     background-color: rgba(255,255,255,0.8);
-    color: #1c1c1c;
     z-index: 999;
 }
 .sticky #burger-button,
 .sticky #menu-nav a{
     transition: color 1s ease-in-out;
-    color: #1c1c1c;
+    color: rgb(142, 142, 142);
 }
 
 /* pour aerer le menu */
 #menu span,
 #container-burger{
-    /* padding: 10px 20px 10px 20px; */
     padding: 5px;
-    
+    color: rgb(142, 142, 142);
 }
 #menu span::first-letter{
     color: #33ffff;
@@ -212,7 +203,7 @@ header{
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: #1c1c1c;
+    background-color: rgba(142, 142, 142,0.9);
     transform: translateX(-100%);
     transition: transform .2s ease-out;
 }
@@ -376,6 +367,7 @@ header{
     padding: 20px;
     margin: 20px;
     background-color: #ffffff;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
 .container.case:hover i.fas{
     color : #ffffcc;
@@ -412,7 +404,7 @@ header{
     transition: opacity 1s ease-out;
 }
 .portfolio-image:hover{
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .container.text{
@@ -421,11 +413,7 @@ header{
     width: 100%;
     max-width: 100%;
     height: 100%;
-<<<<<<< HEAD
-    max-height: 100%; 
-=======
     max-height: 100%;
->>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
 }
 .text span{
     margin: auto;
@@ -531,9 +519,10 @@ header{
 /* style des icones */
 .container.testimonials .fas{
     background: #ffffff;
-    color: #1c1c1c;
+    color:rgba(255, 204, 102,0.6);
     border: none;
 }
+
 /*************************************/
         /* style section blog  */
 /*************************************/
@@ -562,10 +551,13 @@ header{
 .blog-slide{
     padding: 10px;
     text-align: left;
+    background-color: #ffffff;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .container.blog-text{
     background-color: #ffffff;
+    padding: 5px;
 }
 
 #sb2,
@@ -722,11 +714,7 @@ header ul{
 /* le contenu des divs qui vont etre slide */
 
 .blog-slide{
-<<<<<<< HEAD
-    /* width: 33%; */
-=======
     width: 33%;
->>>>>>> 10fcff5b1f5c4bc16de5015207574d17861ae13b
     padding: 20px;
     margin: 0px 10px 0px 10px;
 }

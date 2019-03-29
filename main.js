@@ -1,3 +1,7 @@
+// /////////////////////////////////////////////
+            // pour le menu burger//
+// /////////////////////////////////////////////
+
 // je recupere le contenu du menu et ma sidebar
 
 var content = document.getElementById('burger-content');
