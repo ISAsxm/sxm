@@ -1,0 +1,741 @@
+    /*************************************/
+            /* style mobileFirst */
+    /*************************************/
+/*************************************/
+        /* style general */
+/*************************************/
+
+/* pour oter les styles par defaut des listes et des liens */
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li,
+a{
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    color: #1c1c1c;
+}
+a:hover{
+    color: #33ffff;
+}
+/* style general des bouttons */
+
+.button{
+    margin: 5px;
+    padding:10px;
+    background-color: #ffffff;
+    color: #33ffff;
+    border: solid #33ffff;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #33ffff;
+    border: solid #f4f4f4;
+    color: #ffffff;
+}
+
+/* style des icones */
+i{
+    border: solid rgba(51, 255, 255,0.6);
+    color: #33ffff;
+    border-radius: 50%;
+    transition: background-color 2s ease-out, color 2s ease-out;
+}
+i:hover{
+    background: rgba(51,255,255,0.6);
+    color: #ffffcc;
+}
+
+/* style des points sous les slideShows */
+.container.dot{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+}
+.dot{
+    display: flex;
+    margin: auto;
+}
+
+.dot a{
+    margin: 5px 5px 20px 5px;
+    padding: 5px;
+    background-color: #33ffff;
+    border-radius: 50%;
+}
+
+/* style general des images */
+img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* police generale */
+body{
+    font-family: 'Atma', cursive;
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: rgb(142, 142, 142);
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: 900;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+p{
+    font-family: 'Buda', cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(142, 142, 142);
+    text-align: justify;
+}
+/* style general des sections et div */
+header,
+section{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+}
+/* pour pousser les elements a droite */
+.push{
+    margin-left: auto;
+}
+/*************************************/
+        /* style du header */
+/*************************************/
+
+/* style principal du header */
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/coordonees.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+} 
+
+/* style section menu dans header */
+
+/* pour positionner le menu et le logo avant le home*/
+#menu{
+    align-items: center;
+    order: -1;
+    width: 100%;
+    text-align: left;
+}
+.sticky{
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);
+    color: #1c1c1c;
+    z-index: 999;
+}
+.sticky #burger-button,
+.sticky #menu-nav a{
+    transition: color 1s ease-in-out;
+    color: #1c1c1c;
+}
+
+/* pour aerer le menu */
+#menu span,
+#container-burger{
+    /* padding: 10px 20px 10px 20px; */
+    padding: 5px;
+    
+}
+#menu span::first-letter{
+    color: #33ffff;
+}
+/* pour effacer la nav menu */
+#menu-nav{
+    display: none;
+}
+
+/* style du menu burger */
+
+/* style de l'icone */
+#burger-button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding:0px;
+    color: #ffffff;
+}
+#burger-button:hover{
+    color: #33ffff;
+    transform: scale(1.5);
+    transition: transform .2s ease-out;
+}
+/* style de la side-bar */
+#burger-sidebar{
+    position: fixed;
+    z-index: 20;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+}
+
+/* style du contenu de la sidebar */
+
+/* pour faire apparaitre le contenu */
+#burger-sidebar #menu-nav{
+    display: inherit;
+}
+
+/* pour aligner la liste */
+#burger-sidebar #menu-nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+#burger-sidebar #menu-nav a{
+    color: #ffffff;
+    padding: 10px;
+}
+#burger-sidebar #menu-nav a:hover{
+    color:#33ffff;
+}
+#burger-sidebar #menu-nav a::first-letter{
+    color: #33ffff;
+}
+/* pour faire apparaitre la sidebar sur la page */
+.burger-activated #burger-sidebar{
+    transform: translateX(0);
+}    
+
+/* style section home dans header */
+
+/* pour centrer le container du titre et des logo */
+#home{
+    margin: auto;
+}
+
+/* pour centrer le contenu */
+
+#home *{
+    margin: auto;
+}
+
+/* pour aerer */
+#home div{
+    padding: 20px 0px 20px 0px;
+}
+
+/* styles des icones */
+#home a{
+    display: inline;
+}
+#home i{
+    padding: 6px;
+    color: #ffffff;
+    border: none; 
+}
+#home a:hover{
+   background: none;
+}
+
+#home h2 span:first-child{
+    color: #33ffff;
+    letter-spacing: .2rem;
+}
+#home h2 span:nth-child(2),
+#home h2 span:nth-child(3){
+    display: none;
+}
+
+/*************************************/
+        /* style section about me */
+/*************************************/
+#about{
+    text-align: left;
+}
+#about img{
+    margin: auto;
+}
+
+/* style du texte et des barres de progressions */
+#about h1,
+#about h3,
+#about p,
+#about a{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* style barre externe */
+.bar {
+    margin: 10px;
+    border-radius: 5px;
+    background: #f4f4f4;
+    box-shadow: inset 1px 1px 5px #777777;
+}
+
+/* style barre interne */
+.percentage {
+    padding: 12px;
+    background: rgba(51,255,255,0.8);
+    color: #ffffff;
+    border-radius: 5px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+/* pour l'animation des barres de progression */
+#up1{
+    width: 95%;
+    animation-name: growUp1;
+    
+}
+@keyframes growUp1{
+    from {width : 30%;}
+    to {width: 95%;}
+}
+
+#up2{
+    width: 80%;
+    animation-name: growUp2;
+}
+@keyframes growUp2{
+    from {width : 30%;}
+    to {width: 80%;}
+}
+
+#up3{
+    width: 90%;
+    animation-name: growUp3;
+}
+@keyframes growUp3{
+    from {width : 30%;}
+    to {width: 90%;}
+}
+
+/* cf style general pour les autres styles des buttons */
+#about-me-button a{
+    margin: 10px;
+}
+/*************************************/
+        /* style section services*/
+/*************************************/
+#services{
+    background-color:  rgba(51, 255, 255, 0.1);
+
+}
+
+/*pour placer les div containers dans les containers */
+.container.services{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background-color:  rgba(51, 255, 255, 0.05);
+}
+
+/* style des div containers */
+.container.case{
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+}
+.container.case:hover i.fas{
+    color : #ffffcc;
+    background : rgba(51,255,255,0.6);
+}
+
+/* pour centrer dans le container */
+.container.case *{
+    padding: 20px;
+    margin: auto;
+}
+
+/*************************************/
+        /* style section portfolio */
+/*************************************/
+#portfolio ul{
+    justify-content: center;
+}
+#portfolio a{
+    padding:10px;
+}
+
+/*pour placer les div images dans le contener */
+.portfolio-content{
+    text-align: center;
+    position: relative;
+    margin: 10px;
+}
+
+/* pour styliser tous les containers images et avec text */
+.portfolio-image{
+    margin: auto;
+    z-index: 15;
+    transition: opacity 1s ease-out;
+}
+.portfolio-image:hover{
+    opacity: 0.2;
+}
+
+.container.text{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%; 
+}
+.text span{
+    margin: auto;
+}
+
+/* style des icones */
+.text .fas{
+    background: #33ffff;
+    color: #ffffcc;
+    padding: 8px;
+}
+/* pour l'animation des liens du menu */
+.colorLinks{
+    border-bottom: 1px solid #33ffff;
+    color: #33ffff;
+}
+
+/*********************************************/
+        /* style section testimonials */
+/*********************************************/
+
+/* style de l'image */
+#testimonials img{
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+/* style du slideshow testimonials*/
+
+/* animation pour slider les divs */
+@keyframes AutoSlide{
+	0% {
+		left: 0%; /*1ère image*/
+	}
+	20% {
+		left: 0%; /*idem pour attente*/
+	}
+	40% {
+		left: -100%; /*2ème image*/
+	}
+	60% {
+		left: -100%; /*idem pour attente*/
+	}
+	80% {
+		left: -200%; /*3ème image*/
+	}
+	100% {
+		left: -200%; /*idem pour attente*/
+	}
+}
+
+#slideShow{
+    position: relative;
+    width: 50%;
+    height: 300px;
+    margin: auto;
+	overflow: hidden;
+}
+
+#slideContent li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
+
+#slideContent{
+    display:flex;
+    position: absolute;
+    width: 300%;
+    height: 300px;
+/*appel de l'animation*/
+    /* animation-name: AutoSlide; */
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+/* style de la 2eme section testitmonials*/
+.container.testimonials{
+    background-color: #ffffff;
+    padding:20px;
+}
+
+.container.testimonials *,
+#slideContent li *{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#slideContent li h3,
+#slideContent li h4,
+.container.testimonials p{
+    text-transform: capitalize;
+}
+.container.testimonials h3{
+    color: #33ffff;
+}
+
+/* style des icones */
+.container.testimonials .fas{
+    background: #ffffff;
+    color: #1c1c1c;
+    border: none;
+}
+/*************************************/
+        /* style section blog  */
+/*************************************/
+#blog{
+    background-color: rgba(51, 255, 255, 0.05);
+}
+#blog h2{
+    color: #33ffff;
+    text-decoration: underline;
+}
+/* style du slideshow */
+
+/* le container qui contient les slides */
+#blog-slideShow{
+    margin: auto;
+    overflow: hidden;
+}
+
+/* le contenu du slide */
+#blog-slideContent{
+    margin:0;
+    padding: 0;
+}
+
+/* les containers des divs qui vont etre slide */
+.blog-slide{
+    padding: 10px;
+    text-align: left;
+}
+
+.container.blog-text{
+    background-color: #ffffff;
+}
+
+#sb2,
+#sb3,
+#sb4{
+    display: none;
+}
+/*************************************/
+        /* style section contact */
+/*************************************/
+
+/* style des divs de contact */
+.container.content-contact{
+    text-align: center;
+    padding: 10px;
+}
+.content-contact p{
+    text-align: center;
+}
+/* style des icones */
+.content-contact .fas{
+    padding: 8px;
+}
+.content-contact span{
+    padding: 10px;
+}
+
+/* style du formulaire */
+.container.form input,
+.container.form textarea{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* cf style general pour les autres styles du button */
+.button-form{
+    width: 150px;
+}
+/*************************************/
+        /* style du footer */       
+/*************************************/
+footer{
+    background-color: rgba(51, 255, 255,0.2);
+}
+footer small{
+    color: #33ffff;
+    margin: auto;
+    padding:20px;
+}
+    /***************************************************/
+            /* fin du style style mobile First */
+    /***************************************************/
+
+/* ******************************************************************** */
+
+    /***************************************************/
+            /* style avec mediaquery a partir de 1050px */
+    /***************************************************/
+
+@media screen and (min-width: 1050px){
+
+/*************************************/
+        /* style du menu dans header */
+/*************************************/
+
+/* pour effacer le menu burger */
+#burger-button, 
+#burger-sidebar, 
+.burger-activated{
+    display: none;
+}
+
+/* pour replacer la nav menu */
+#menu-nav{
+    display: inherit;
+}
+
+/* pour positionner la nav menu */
+header ul{
+    display: flex; 
+}
+
+#menu a{
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* pour leffet souligné du menu */
+.underline{
+    text-decoration: underline;
+    transform: scale(1.2);
+    transition: transform .2s ease-out;
+}
+/*************************************/
+        /* style section about me */
+/*************************************/
+#about{
+    flex-direction: row;
+}
+
+#container-bar,
+#about-me-button{
+    padding: 10px;
+}
+/*************************************/
+        /* style section services*/
+/*************************************/
+
+/*pour placer les div conteners dans les conteners */
+.container.services{
+    flex-direction: row;
+}
+/*************************************/
+        /* style section portfolio */
+/*************************************/
+
+/*pour placer les div images dans le contener */
+.container.portfolio{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-content{
+    width: 30%;
+    margin:10px;
+}
+/*************************************/
+        /* style section testimonials */
+/*************************************/
+
+/* style du slideshow testimonials*/
+#slideShow {
+    width: 100%;
+}
+/* style de la 2eme section testitmonials*/
+.container.testimonials{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/*************************************/
+        /* style section blog  */
+/*************************************/
+
+/* style du slideshow */
+
+/* le contenu du slide */
+/* #blog-slideContent{
+    width: 135%;
+   
+} */
+
+/* le contenu des divs qui vont etre slide */
+
+.blog-slide{
+    width: 33%;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+.blog-slide img{
+    width: 100%;
+}
+.blog-text{
+    background: #ffffff;
+}
+
+/* pour faire reaparaitre les slides du milieu */
+#sb2,
+#sb3{
+    display: inherit;
+}
+
+/* pour cacher les 2 ronds du style natel */
+.dot-hidden{
+    display: none;
+}
+/*************************************/
+        /* style section contact */
+/*************************************/
+.container.contact{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.content-contact{
+    margin: auto;
+}
+
+}
