@@ -18,7 +18,7 @@ a{
 }
 /* style general des liens */
 a{
-    color:#fffc66;
+    color:#fecd19;
 }
 a:hover{
     color: #33ffff;
@@ -48,7 +48,7 @@ i{
 }
 i:hover{
     background: rgba(51,255,255,0.6);
-    color: #ffffb3;
+    color: #fecd19;
 }
 
 /* style des points sous les slideShows */
@@ -87,21 +87,22 @@ h1{
     font-weight: 900;
     text-transform: capitalize;
     background: linear-gradient(to bottom,#33ffff 0%, #ccffff 100%);
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 h2{
     font-size: 1.5rem;
     font-weight: 900;
-    color:#ffffb3;
+    color:#fecd19;
     text-shadow: 1px 1px rgba(142, 142, 142, 0.8);
 }
 
 h3{
     font-size: 1rem;
     font-weight: 900;
-    color:#ffffb3;
+    color:#fecd19;
     text-shadow: 1px 1px rgba(142, 142, 142, 0.8);
 }
 
@@ -429,7 +430,7 @@ header{
 /* style des icones */
 .text .fas{
     background: #33ffff;
-    color: #ffffb3;
+    color: #fecd19;
     padding: 8px;
 }
 /* pour l'animation des liens du menu */
@@ -526,7 +527,7 @@ header{
 /* style des icones */
 .container.testimonials .fas{
     background: #ffffff;
-    color:#fffc66;
+    color:#fecd19;
     border: none;
 }
 
