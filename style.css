@@ -28,7 +28,7 @@ a:hover{
 .button{
     margin: 5px;
     padding:10px;
-    background-color: #ffffff;
+    background-color: rgba(255,252,240,0.4);
     color: #33ffff;
     border: solid #33ffff;
     border-radius: 10px;
@@ -147,6 +147,7 @@ section{
 header{
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(images/coordonees.jpg);
     background-size: cover;
+    width:100vw;
     height: 100vh;
     color: rgb(196, 196, 196);
 } 
@@ -201,8 +202,7 @@ header{
 }
 #burger-button:hover{
     color: #33ffff;
-    transform: scale(1.5);
-    transition: transform .2s ease-out;
+    transition: color .5s ease-out;
 }
 /* style de la side-bar */
 #burger-sidebar{
@@ -289,6 +289,7 @@ header{
 /*************************************/
 #about{
     text-align: left;
+    background-color: #fffcf0;
 }
 #about img{
     margin: auto;
@@ -307,7 +308,7 @@ header{
 .bar {
     margin: 10px;
     border-radius: 5px;
-    background: #f4f4f4;
+    background-color: rgba(255,252,240,0.2);
     box-shadow: inset 1px 1px 5px #777777;
 }
 
@@ -391,6 +392,10 @@ header{
 /*************************************/
         /* style section portfolio */
 /*************************************/
+#portfolio{
+    background-color: #fffcf0;
+}
+
 #portfolio ul{
     justify-content: center;
 }
@@ -442,7 +447,9 @@ header{
 /*********************************************/
         /* style section testimonials */
 /*********************************************/
-
+#testimonials{
+    background-color: rgba(255,252,240,0.4);
+}
 /* style de l'image */
 #testimonials img{
     border-radius: 50%;
@@ -496,7 +503,7 @@ header{
     height: 300px;
 /*appel de l'animation*/
     animation-name: AutoSlide;
-	animation-duration: 20s;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
@@ -504,7 +511,6 @@ header{
 
 /* style de la 2eme section testitmonials*/
 .container.testimonials{
-    background-color: #ffffff;
     padding:20px;
 }
 
@@ -576,7 +582,9 @@ header{
 /*************************************/
         /* style section contact */
 /*************************************/
-
+#contact{
+    background-color: #fffcf0;
+}
 /* style des divs de contact */
 .container.content-contact{
     text-align: center;
@@ -608,6 +616,7 @@ header{
 /* cf style general pour les autres styles du button */
 .button-form{
     width: 150px;
+    background-color: rgba(255,252,240,0.4);
 }
 /*************************************/
         /* style du footer */       
