@@ -38,14 +38,13 @@ var startSticky = window.innerHeight;
 // j'ajoute mon menu a mes autres sections
 // des qu'il depasse la taille de mon header
 function stickyMenu(){
-
+      
       if(window.scrollY >= startSticky){
             menu.classList.add('sticky');
       }else {
             menu.classList.remove('sticky');
 }
       underlineMenu();
-      
 }
 
 // ////////////////////////////////////////////////////
@@ -108,106 +107,101 @@ var contact = document.getElementById('contact').offsetTop;
       }
 }
 
-// ////////////////////////////////////////////////////
-//   pour l'animation des liens du menu portfolio //
-// ////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////// //
+//   pour l'animation du menu/collection section portfolio   //
+// ///////////////////////////////////////////////////////// //
 
 $(document).ready(function(){
 
       $('.beaches').on({
-            
             mouseover: function(){
             $('#beaches').addClass('colorLinks');},
-
             mouseleave: function(){
             $('#beaches').removeClass('colorLinks');}
-            
       });
 
       $('.animals').on({
-            
             mouseover: function(){
             $('#animals').addClass('colorLinks');},
-
             mouseleave: function(){
             $('#animals').removeClass('colorLinks');}
-            
       });
 
       $('.sunsets').on({
-            
             mouseover: function(){
             $('#sunsets').addClass('colorLinks');},
-
             mouseleave: function(){
             $('#sunsets').removeClass('colorLinks');}
-            
       });
 
+      // pour filtrer la collection selon le menu
 
+      $('#all').on('click', function(){
+            $('.portfolio-content').css({'visibility':'initial','order':'initial'});
+            $('.portfolio-image').css({'visibility':'initial','order':'initial'});
+      });
+
+      $('#beaches').on('click', function(){
+            $('.beaches').css({'visibility':'initial','order':'-1'});
+            $('.sunsets').css({'visibility':'hidden','order':'1'});
+            $('.animals').css({'visibility':'hidden','order':'2'});
+      });
+
+      $('#sunsets').on('click', function(){
+            $('.beaches').css({'visibility':'hidden','order':'1'});
+            $('.sunsets').css({'visibility':'initial','order':'-1'});
+            $('.animals').css({'visibility':'hidden','order':'2'});
+      });
  
+      $('#animals').on('click', function(){
+            $('.beaches').css({'visibility':'hidden','order':'1'});
+            $('.sunsets').css({'visibility':'hidden','order':'2'});
+            $('.animals').css({'visibility':'initial','order':'-1'});
+      });
 
 // ////////////////////////////////////////////////////
 //   pour l'animation des slides du blog //
 // ////////////////////////////////////////////////////
 
-
 var windowWidth= $(window).width();
       if(windowWidth < 1050){
 
             $("a[href$='#sb1']").on('click', function(){
-            
                   $('#sb1').show();
                   $('#sb2').hide();
                   $('#sb3').hide();
                   $('#sb4').hide();
-
             });
 
-
             $("a[href$='#sb2']").on('click', function(){
-            
                   $('#sb1').hide();
                   $('#sb2').show();
                   $('#sb3').hide();
                   $('#sb4').hide();
-
             });
 
             $("a[href$='#sb3']").on('click', function(){
-            
                   $('#sb1').hide();
                   $('#sb2').hide();
                   $('#sb3').show();
                   $('#sb4').hide();
-                  
             });
 
             $("a[href$='#sb4']").on('click', function(){
-            
                   $('#sb1').hide();
                   $('#sb2').hide();
                   $('#sb3').hide();
                   $('#sb4').show();
-      
             });
-
       }else{
-
             $("a[href$='#sb4']").on('click', function(){
-            
                   $('#sb1').hide();
                   $('#sb4').show();
-
             });
-
             $("a[href$='#sb1']").on('click', function(){
-
                   $('#sb4').hide();
                   $('#sb1').show();
-
             });
-
       }
- 
+
 });

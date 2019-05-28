@@ -399,8 +399,17 @@ header{
 #portfolio ul{
     justify-content: center;
 }
-#portfolio a{
+#portfolio li{
     padding:10px;
+    color:#fecd19;
+}
+#portfolio li:hover{
+    color: #33ffff;
+    border-bottom: 1px solid #33ffff;
+}
+/* pour l'animation des 'liens' du menu */
+.colorLinks{
+    border-bottom: 1px solid #fecd19;
 }
 
 /*pour placer les div images dans le contener */
@@ -437,11 +446,6 @@ header{
     background: #33ffff;
     color: #fecd19;
     padding: 8px;
-}
-/* pour l'animation des liens du menu */
-.colorLinks{
-    border-bottom: 1px solid #33ffff;
-    color: #33ffff;
 }
 
 /*********************************************/
