@@ -113,6 +113,8 @@ var contact = document.getElementById('contact').offsetTop;
 
 $(document).ready(function(){
 
+
+// quand je survol une case souligne le menu correspondant
       $('.beaches').on({
             mouseover: function(){
             $('#beaches').addClass('colorLinks');},
@@ -134,7 +136,7 @@ $(document).ready(function(){
             $('#sunsets').removeClass('colorLinks');}
       });
 
-      // pour filtrer la collection selon le menu
+      // pour filtrer la collection selon le menu et afficher comme si les autres n'existait pas
 
       $('#all').on('click', function(){
             $('.portfolio-content').css({'visibility':'initial','order':'initial'});
@@ -162,7 +164,7 @@ $(document).ready(function(){
 // ////////////////////////////////////////////////////
 //   pour l'animation des slides du blog //
 // ////////////////////////////////////////////////////
-
+// a partir d'une certaine taille d'ecran, j'ai 2 slides, sinon 4
 var windowWidth= $(window).width();
       if(windowWidth < 1050){
 
@@ -203,5 +205,75 @@ var windowWidth= $(window).width();
                   $('#sb1').show();
             });
       }
+
+// /////////////////////////////////////////////////////// //
+//   pour l'animation des mots du titre dans section home  //
+// /////////////////////////////////////////////////////// //
+
+// je déclare les mots que je veux ecrire
+var dataText = ['SXM.','Saint-Martin.', "Sint Maarten.", "The Friendly Island!"];
+// je déclare le mot en cours d'écriture
+var currentWord = 0;
+// je déclare l'index de la lettre du mot en cours
+var letter_index = 0;
+// pour la valeur renvoyée par  la function setInterval
+var interval;
+// je declare l'element qui va recevoir les mots
+var txt_element = document.querySelector('#sxm');
+
+// ma fonction pour ecrire les mots lettre par lettre
+function typeWriter(){
+      var txt = dataText[currentWord].substring(0, letter_index + 1);
+      txt_element.innerHTML = txt;
+      letter_index++;
+      // dès qu'un mot est écrit, efface le après une pause
+      if(txt === dataText[currentWord]) {
+		clearInterval(interval);
+		setTimeout(function() {
+			interval = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+// ma fonction qui va effacer les mots et réecrire après en boucle
+function Delete() {
+	// pour effacer lettre par lettre
+	var txt =  dataText[currentWord].substring(0, letter_index - 1);
+	txt_element.innerHTML = txt;
+	letter_index--;
+      if(txt === '') {
+		clearInterval(interval);
+		// pour boucler entre les mots
+		if(currentWord == (dataText.length - 1)){
+			currentWord = 0;
+		}else{
+			currentWord++;
+                  letter_index = 0;
+            }
+            // pour démarrer après une pause
+            setTimeout(function() {
+			interval = setInterval(typeWriter, 100);
+		}, 200);
+	}
+}
+// je demarre l'animation au chargement
+interval = setInterval(typeWriter, 100);
+
+
+// ////////////////////////////////////////////////////////////////// //
+      // pour l'effet smooth lors du scroll du menu vers les ancres //
+// ////////////////////////////////////////////////////////////////// //
+// je selectionne la classe js qui va me servir à déclencher l'accélération
+// du scroll et assigne une vitesse lors du scroll à mon document html
+
+$('.js-scrollTo').on('click', function(){
+      // je cache le menu lors du click sur un lien 
+      $('#container-burger').removeClass('burger-activated');
+
+      var section = $(this).attr('href');
+      var speed = 750;
+      $('html, body').animate({ scrollTop: $(section).offset().top}, speed);
+      return false;
+});
+
 
 });

@@ -183,6 +183,9 @@ header{
 #menu span::first-letter{
     color: #33ffff;
 }
+#menu span{
+    color: #fecd19;
+}
 /* pour effacer la nav menu version natel*/
 #menu-nav{
     display: none;
@@ -198,7 +201,7 @@ header{
     outline: none;
     font-size: 2rem;
     padding:0px;
-    color: rgb(142, 142, 142);
+    color: #fecd19;
 }
 #burger-button:hover{
     color: #33ffff;
@@ -230,7 +233,7 @@ header{
 }
 
 #burger-sidebar #menu-nav a{
-    color: rgb(196, 196, 196);
+    color: #fecd19;
     padding: 10px;
 }
 #burger-sidebar #menu-nav a:hover{
@@ -250,9 +253,7 @@ header{
 #home{
     margin: auto;
 }
-
 /* pour centrer le contenu */
-
 #home *{
     margin: auto;
 }
@@ -275,15 +276,11 @@ header{
    background: none;
 }
 
-#home h2 span:first-child{
+#sxm{
     color: #33ffff;
     letter-spacing: .2rem;
 }
-#home h2 span:nth-child(2),
-#home h2 span:nth-child(3){
-    display: none;
-}
-
+  
 /*************************************/
         /* style section about me */
 /*************************************/
@@ -356,6 +353,7 @@ header{
 #about-me-button a{
     margin: 10px;
 }
+
 /*************************************/
         /* style section services*/
 /*************************************/
@@ -406,6 +404,7 @@ header{
 #portfolio li:hover{
     color: #33ffff;
     border-bottom: 1px solid #33ffff;
+    cursor: pointer;
 }
 /* pour l'animation des 'liens' du menu */
 .colorLinks{
@@ -670,7 +669,8 @@ header ul{
 }
 
 #menu a{
-    color: rgb(196, 196, 196);
+    color: #fecd19;
+    /* color: rgb(196, 196, 196); */
     padding: 10px;
 }
 
